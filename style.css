@@ -5,7 +5,9 @@
 }
 
 body {
-  font-family: sans-serif;
+  font-family: "Poppins", sans-serif;
+  background: #fbeeac;
+  color: #4d4d4d;
 }
 
 /* To click on the encapsulating BUTTON, not the
@@ -25,37 +27,32 @@ svg {
   align-items: center;
 }
 
+.pad {
+  transition: all 500ms ease;
+}
+
 .kick-pad,
 .snare-pad,
 .hihat-pad {
+  background: linear-gradient(145deg, #e2d69b, #ffffb8);
+  box-shadow: 5px 5px 30px #d5ca92, -5px -5px 30px #ffffc6;
   width: 5rem;
   height: 5rem;
+  border-radius: 20px;
   margin: 1rem 0.5rem;
   cursor: pointer;
 }
 
-.kick-pad {
-  background: rgb(139, 173, 245);
-}
-
-.snare-pad {
-  background: rgb(250, 147, 233);
-}
-
-.hihat-pad {
-  background: rgb(85, 238, 200);
-}
-
 .kick-pad.active {
-  background: rgb(45, 96, 207);
+  background: linear-gradient(145deg, #7d9cdd, #95b9ff);
 }
 
 .snare-pad.active {
-  background: rgb(207, 42, 180);
+  background: linear-gradient(145deg, #e184d2, #ff9df9);
 }
 
 .hihat-pad.active {
-  background: rgb(7, 173, 132);
+  background: linear-gradient(145deg, #3dcda9, #49f4c9);
 }
 
 .kick-track,
@@ -85,23 +82,27 @@ svg {
 .controls button {
   padding: 1rem;
   border: none;
-  background: rgb(88, 88, 88);
-  color: #fff;
+  background: linear-gradient(145deg, #e2d69b, #ffffb8);
+  box-shadow: 5px 5px 30px #d5ca92, -5px -5px 30px #ffffc6;
+  color: #4d4d4d;
+  border-radius: 5px;
   font-size: 1rem;
   cursor: pointer;
   transition: all 500ms ease;
 }
 
-.pad {
-  transition: all 500ms ease;
+.mute.active {
+  background: rgb(167, 167, 167);
 }
 
 .play {
   padding: 1rem 2rem;
   font-size: 1.5rem;
-  background: rgb(88, 88, 88);
-  color: #fff;
+  background: linear-gradient(145deg, #e2d69b, #ffffb8);
+  box-shadow: 5px 5px 30px #d5ca92, -5px -5px 30px #ffffc6;
+  color: #4d4d4d;
   border: none;
+  border-radius: 5px;
   cursor: pointer;
   margin-top: 3rem;
 }
@@ -110,13 +111,14 @@ select {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+  border: none;
+  border-radius: 5px;
   padding: 1rem;
   font-size: 1rem;
+  color: #4d4d4d;
   cursor: pointer;
-}
-
-.mute.active {
-  background: rgb(167, 167, 167);
+  background: linear-gradient(145deg, #e2d69b, #ffffb8);
+  box-shadow: 5px 5px 30px #d5ca92, -5px -5px 30px #ffffc6;
 }
 
 .tempo {
@@ -130,7 +132,7 @@ select {
   margin: 1rem 0;
   width: 100%;
   position: relative;
-  background: rgb(80, 80, 80);
+  background: #4d4d4d;
   cursor: pointer;
   border-radius: 1rem;
 }
