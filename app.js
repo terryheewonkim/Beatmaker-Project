@@ -9,6 +9,8 @@ class DrumKit {
     this.index = 0;
     // For tempo
     this.bpm = 150;
+    // For play/stop functionality
+    this.isPlaying = null;
   }
   // Toggle active class when pads are clicked
   activePad() {
@@ -45,9 +47,27 @@ class DrumKit {
   start() {
     // Calculate interval in milliseconds
     const interval = (60 / this.bpm) * 1000;
-    setInterval(() => {
-      this.repeat();
-    }, interval);
+    // Check if it's already playing
+    if (this.isPlaying) {
+      // Clear the interval
+      clearInterval(this.isPlaying);
+      // Rest isPlaying to null
+      this.isPlaying = null;
+    } else {
+      this.isPlaying = setInterval(() => {
+        this.repeat();
+      }, interval);
+    }
+  }
+  // Update the play button to stop and vice versa
+  updateBtn() {
+    if (!this.isPlaying) {
+      this.playBtn.innerText = "Stop";
+      this.playBtn.classList.add("active");
+    } else {
+      this.playBtn.innerText = "Play";
+      this.playBtn.classList.remove("active");
+    }
   }
 }
 // END DRUMKIT CLASS
@@ -64,5 +84,6 @@ drumKit.pads.forEach((pad) => {
 });
 
 drumKit.playBtn.addEventListener("click", () => {
+  drumKit.updateBtn();
   drumKit.start();
 });
