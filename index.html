@@ -26,6 +26,8 @@
             <option value="./allSounds/kick-classic.wav">Classic Kick</option>
             <option value="./allSounds/kick-808.wav">808 Kick</option>
             <option value="./allSounds/kick-heavy.wav">Heavy Kick</option>
+            <option value="./allSounds/kick-thump.wav">Thump Kick</option>
+            <option value="./allSounds/kick-newwave.wav">New Wave Kick</option>
           </select>
         </div>
         <!-- End controls div -->
@@ -52,7 +54,9 @@
               Classic Snare
             </option>
             <option value="./allSounds/snare-808.wav">808 Snare</option>
-            <option value="./allSounds/snare-vinyl02.wav">Snare Vinyl</option>
+            <option value="./allSounds/snare-vinyl02.wav">Vinyl Snare</option>
+            <option value="./allSounds/snare-electro.wav">Electro Snare</option>
+            <option value="./allSounds/snare-lofi02.wav">Lofi Snare</option>
           </select>
         </div>
         <!-- End controls div -->
@@ -80,6 +84,8 @@
             </option>
             <option value="./allSounds/hihat-808.wav">808 Hihat</option>
             <option value="./allSounds/hihat-analog.wav">Analog Hihat</option>
+            <option value="./allSounds/hihat-digital.wav">Digital Hihat</option>
+            <option value="./allSounds/hihat-electro.wav">Electro Hihat</option>
           </select>
         </div>
         <!-- End controls div -->
@@ -96,6 +102,17 @@
       </div>
       <!-- Play button -->
       <button class="play">Play</button>
+      <!-- Tempo slider -->
+      <div class="tempo">
+        <input
+          type="range"
+          class="tempo-slider"
+          max="300"
+          min="20"
+          value="150"
+        />
+        <p>Tempo: <span class="tempo-number">150</span></p>
+      </div>
     </div>
     <!-- Get audios -->
     <audio class="kick-sound" src="./allSounds/kick-classic.wav"></audio>
